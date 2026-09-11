@@ -1,0 +1,444 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #dfe9ff,
+        #f5e8ff,
+        #e7f5ff
+    );
+
+    color: #222;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background: white;
+
+    padding: 20px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+
+    color: #3158c7;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: #3158c7;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #8b5cf6;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+    max-width: 1100px;
+
+    margin: 30px auto;
+
+    padding: 50px 30px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    text-align: center;
+
+    color: #3158c7;
+
+    font-size: 30px;
+}
+
+
+/* =========================
+   INÍCIO
+========================= */
+
+#inicio {
+    text-align: center;
+
+    padding: 80px 30px;
+}
+
+#inicio h2 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+#inicio p {
+    font-size: 20px;
+
+    color: #555;
+}
+
+.botao-principal {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 14px 25px;
+
+    background: #3158c7;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    transform: translateY(-3px);
+
+    background: #8b5cf6;
+}
+
+
+/* =========================
+   IMAGEM DOS PRODUTOS
+========================= */
+
+.imagem-produtos {
+    text-align: center;
+
+    margin: 30px 0;
+}
+
+.imagem-produtos img {
+    width: 100%;
+
+    max-width: 850px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   CARDS DOS PRODUTOS
+========================= */
+
+.produtos-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.produto {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.16);
+}
+
+.produto-imagem {
+    font-size: 60px;
+
+    background: #eef2ff;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+}
+
+.produto h3 {
+    color: #3158c7;
+
+    font-size: 20px;
+}
+
+.produto p {
+    color: #666;
+}
+
+.produto strong {
+    font-size: 22px;
+
+    color: #222;
+}
+
+
+/* =========================
+   BOTÃO ADICIONAR
+========================= */
+
+.adicionar {
+    border: none;
+
+    padding: 13px 18px;
+
+    border-radius: 12px;
+
+    background: #3158c7;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.adicionar:hover {
+    background: #8b5cf6;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   CARRINHO
+========================= */
+
+#carrinho {
+    background: #eef4ff;
+}
+
+#lista-carrinho {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.item-carrinho {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: 0 5px 15px #ddd;
+}
+
+.item-carrinho h3 {
+    margin-right: auto;
+}
+
+.item-carrinho button {
+    border: none;
+
+    background: #3158c7;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+#finalizar {
+    border: none;
+
+    padding: 15px 22px;
+
+    border-radius: 12px;
+
+    background: #25d366;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#finalizar:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   COMO PEDIR
+========================= */
+
+.passos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.passos div {
+    background: #f3f5ff;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.passos strong {
+    color: #3158c7;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #25d366;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    section {
+        margin: 15px;
+
+        padding: 30px 20px;
+    }
+
+    #inicio h2 {
+        font-size: 30px;
+    }
+
+    .produtos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .passos {
+        grid-template-columns: 1fr;
+    }
+
+    .item-carrinho {
+        flex-wrap: wrap;
+    }
+}
