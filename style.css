@@ -12,17 +12,12 @@ html {
 
 body {
     margin: 0;
-
     font-family: Arial, sans-serif;
 
-    background: linear-gradient(
-        135deg,
-        #dfe9ff,
-        #f5e8ff,
-        #e7f5ff
-    );
+    /* 🌑 FUNDO PRETO */
+    background: #000;
 
-    color: #222;
+    color: #f5f5f5;
 }
 
 
@@ -31,7 +26,7 @@ body {
 ========================= */
 
 header {
-    background: white;
+    background: #050505;
 
     padding: 20px 40px;
 
@@ -44,14 +39,20 @@ header {
 
     z-index: 1000;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid #12345a;
+
+    box-shadow:
+        0 0 15px rgba(0, 140, 255, 0.15);
 }
 
 .logo {
     font-size: 28px;
     font-weight: bold;
 
-    color: #3158c7;
+    color: #008cff;
+
+    text-shadow:
+        0 0 10px rgba(0, 140, 255, 0.6);
 }
 
 nav {
@@ -62,7 +63,7 @@ nav {
 nav a {
     text-decoration: none;
 
-    color: #3158c7;
+    color: #008cff;
 
     font-weight: bold;
 
@@ -70,7 +71,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #8b5cf6;
+    color: #ffffff;
+
+    text-shadow:
+        0 0 10px #008cff;
 }
 
 
@@ -85,19 +89,25 @@ section {
 
     padding: 50px 30px;
 
-    background: rgba(255, 255, 255, 0.9);
+    background: #050505;
+
+    border: 1px solid #111;
 
     border-radius: 25px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.5);
 }
 
 section h2 {
     text-align: center;
 
-    color: #3158c7;
+    color: #008cff;
 
     font-size: 30px;
+
+    text-shadow:
+        0 0 10px rgba(0, 140, 255, 0.4);
 }
 
 
@@ -120,7 +130,7 @@ section h2 {
 #inicio p {
     font-size: 20px;
 
-    color: #555;
+    color: #ccc;
 }
 
 .botao-principal {
@@ -130,7 +140,7 @@ section h2 {
 
     padding: 14px 25px;
 
-    background: #3158c7;
+    background: #008cff;
 
     color: white;
 
@@ -141,12 +151,19 @@ section h2 {
     font-weight: bold;
 
     transition: 0.3s;
+
+    box-shadow:
+        0 0 15px rgba(0, 140, 255, 0.4);
 }
 
 .botao-principal:hover {
     transform: translateY(-3px);
 
-    background: #8b5cf6;
+    background: #00a2ff;
+
+    box-shadow:
+        0 0 15px rgba(0, 160, 255, 0.8),
+        0 0 30px rgba(0, 160, 255, 0.4);
 }
 
 
@@ -167,7 +184,8 @@ section h2 {
 
     border-radius: 20px;
 
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 0 20px rgba(0, 140, 255, 0.2);
 }
 
 
@@ -185,7 +203,7 @@ section h2 {
 }
 
 .produto {
-    background: white;
+    background: #080808;
 
     padding: 25px;
 
@@ -193,23 +211,35 @@ section h2 {
 
     text-align: center;
 
-    box-shadow:
-        0 6px 20px rgba(0, 0, 0, 0.10);
+    border: 1px solid #12345a;
 
-    transition: 0.3s;
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.5);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
+
+
+/* 💙 BRILHO AZUL AO PASSAR O MOUSE */
 
 .produto:hover {
     transform: translateY(-6px);
 
+    border-color: #008cff;
+
     box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.16);
+        0 0 10px rgba(0, 140, 255, 0.9),
+        0 0 30px rgba(0, 140, 255, 0.6),
+        0 0 60px rgba(0, 140, 255, 0.3);
 }
 
 .produto-imagem {
     font-size: 60px;
 
-    background: #eef2ff;
+    background: #050b14;
 
     border-radius: 18px;
 
@@ -219,19 +249,22 @@ section h2 {
 }
 
 .produto h3 {
-    color: #3158c7;
+    color: #ffffff;
 
     font-size: 20px;
 }
 
 .produto p {
-    color: #666;
+    color: #bbb;
 }
 
 .produto strong {
     font-size: 22px;
 
-    color: #222;
+    color: #0099ff;
+
+    text-shadow:
+        0 0 8px rgba(0, 140, 255, 0.4);
 }
 
 
@@ -246,7 +279,7 @@ section h2 {
 
     border-radius: 12px;
 
-    background: #3158c7;
+    background: #008cff;
 
     color: white;
 
@@ -257,12 +290,19 @@ section h2 {
     cursor: pointer;
 
     transition: 0.3s;
+
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.4);
 }
 
 .adicionar:hover {
-    background: #8b5cf6;
+    background: #00a2ff;
 
     transform: scale(1.05);
+
+    box-shadow:
+        0 0 10px rgba(0, 160, 255, 0.9),
+        0 0 25px rgba(0, 160, 255, 0.5);
 }
 
 
@@ -271,7 +311,7 @@ section h2 {
 ========================= */
 
 #carrinho {
-    background: #eef4ff;
+    background: #050505;
 }
 
 #lista-carrinho {
@@ -283,7 +323,7 @@ section h2 {
 }
 
 .item-carrinho {
-    background: white;
+    background: #080808;
 
     padding: 20px;
 
@@ -295,17 +335,22 @@ section h2 {
 
     gap: 15px;
 
-    box-shadow: 0 5px 15px #ddd;
+    border: 1px solid #12345a;
+
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.1);
 }
 
 .item-carrinho h3 {
     margin-right: auto;
+
+    color: white;
 }
 
 .item-carrinho button {
     border: none;
 
-    background: #3158c7;
+    background: #008cff;
 
     color: white;
 
@@ -314,6 +359,15 @@ section h2 {
     border-radius: 8px;
 
     cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.item-carrinho button:hover {
+    background: #00a2ff;
+
+    box-shadow:
+        0 0 10px rgba(0, 160, 255, 0.7);
 }
 
 #finalizar {
@@ -338,6 +392,9 @@ section h2 {
 
 #finalizar:hover {
     transform: scale(1.03);
+
+    box-shadow:
+        0 0 15px rgba(37, 211, 102, 0.5);
 }
 
 
@@ -355,17 +412,28 @@ section h2 {
 }
 
 .passos div {
-    background: #f3f5ff;
+    background: #080808;
 
     padding: 20px;
 
     border-radius: 15px;
 
     text-align: center;
+
+    border: 1px solid #12345a;
+
+    transition: 0.3s;
+}
+
+.passos div:hover {
+    border-color: #008cff;
+
+    box-shadow:
+        0 0 20px rgba(0, 140, 255, 0.35);
 }
 
 .passos strong {
-    color: #3158c7;
+    color: #008cff;
 
     font-size: 18px;
 }
@@ -395,6 +463,9 @@ section h2 {
 
 .whatsapp:hover {
     transform: scale(1.05);
+
+    box-shadow:
+        0 0 15px rgba(37, 211, 102, 0.5);
 }
 
 
@@ -436,69 +507,6 @@ section h2 {
 
     .passos {
         grid-template-columns: 1fr;
-     /* ========================================
-   🌑 TEMA PRETO + BRILHO AZUL
-   ======================================== */
-
-body {
-    background: #000;
-    color: #f5f5f5;
-}
-
-/* Seções */
-section {
-    background: #050505;
-    border: 1px solid #111;
-}
-
-/* Cards dos produtos */
-.produto {
-    background: #080808;
-    border: 1px solid #12345a;
-    transition: 
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
-}
-
-/* ✨ BRILHO AZUL AO PASSAR O MOUSE */
-.produto:hover {
-    transform: translateY(-6px);
-    border-color: #008cff;
-
-    box-shadow:
-        0 0 10px rgba(0, 140, 255, 0.8),
-        0 0 30px rgba(0, 140, 255, 0.5),
-        0 0 60px rgba(0, 140, 255, 0.25);
-}
-
-/* Títulos */
-h2,
-h3 {
-    color: #fff;
-}
-
-/* Preços */
-.produto strong {
-    color: #0099ff;
-    font-size: 20px;
-}
-
-/* Botão adicionar */
-.adicionar {
-    background: #008cff;
-    color: white;
-    border: none;
-    box-shadow: 0 0 10px rgba(0, 140, 255, 0.3);
-    transition: 0.3s;
-}
-
-.adicionar:hover {
-    background: #00a2ff;
-    box-shadow:
-        0 0 10px rgba(0, 160, 255, 0.8),
-        0 0 25px rgba(0, 160, 255, 0.5);
-}
     }
 
     .item-carrinho {
