@@ -1138,3 +1138,146 @@ h2 {
     }
 
 }
+/* ========================================
+   🎁 MONTE SEU KIT
+======================================== */
+
+#monte-kit {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.montador-kit {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.opcao-kit {
+    background: #111;
+    border: 2px solid #008cff;
+    border-radius: 15px;
+    padding: 25px 20px;
+    transition: 0.3s;
+}
+
+.opcao-kit:hover {
+    transform: translateY(-6px);
+    border-color: #008cff;
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.9),
+        0 0 30px rgba(0, 140, 255, 0.6),
+        0 0 60px rgba(0, 140, 255, 0.3);
+}
+
+.opcao-kit h3 {
+    color: #008cff;
+    margin-bottom: 12px;
+}
+
+.opcao-kit p {
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.opcao-kit strong {
+    display: block;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.adicionar-kit {
+    background: #008cff;
+    color: white;
+    border: 2px solid #008cff;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.adicionar-kit:hover {
+    background: #006dcc;
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.9),
+        0 0 25px rgba(0, 140, 255, 0.6);
+    transform: scale(1.05);
+}
+
+.kit-info {
+    max-width: 800px;
+    margin: 30px auto 0;
+    padding: 25px;
+    background: #111;
+    border: 2px solid #008cff;
+    border-radius: 15px;
+}
+
+.kit-info h3 {
+    color: #008cff;
+    margin-bottom: 10px;
+}
+
+.kit-info p {
+    color: #ddd;
+    line-height: 1.6;
+}
+/* ========================================
+   🔎 BARRA DE PESQUISA
+======================================== */
+
+#campo-busca {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+
+    padding: 14px 18px;
+
+    background: #111;
+    color: white;
+
+    border: 2px solid #008cff;
+    border-radius: 10px;
+
+    font-size: 16px;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+#campo-busca::placeholder {
+    color: #aaa;
+}
+
+#campo-busca:focus {
+    border-color: #008cff;
+
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.9),
+        0 0 25px rgba(0, 140, 255, 0.6),
+        0 0 45px rgba(0, 140, 255, 0.3);
+}
+@media (max-width: 800px) {
+
+    .montador-kit {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .montador-kit {
+        grid-template-columns: 1fr;
+    }
+
+    #campo-busca {
+        font-size: 15px;
+    }
+
+}
