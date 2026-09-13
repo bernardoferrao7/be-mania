@@ -2,26 +2,19 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <title>Bê Mania 💙</title>
 
-    <title>Bê Mania</title>
-
-    <link
-        rel="stylesheet"
-        href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-
-    <!-- CABEÇALHO -->
+    <!-- ========================================
+         🏠 CABEÇALHO
+    ======================================== -->
 
     <header>
 
@@ -29,117 +22,87 @@
             💙 Bê Mania
         </div>
 
-
         <nav>
-
             <a href="#inicio">Início</a>
-
             <a href="#produtos">Produtos</a>
-
             <a href="#personalize">Personalize</a>
-
             <a href="#monte-kit">Monte seu kit</a>
-
+            <a href="#por-que-comprar">Por que comprar</a>
             <a href="#como-pedir">Como pedir</a>
-
             <a href="#contato">Contato</a>
-
         </nav>
 
     </header>
 
 
+    <!-- ========================================
+         🏠 INÍCIO
+    ======================================== -->
 
-    <!-- INÍCIO -->
+    <section id="inicio" class="hero">
 
-    <section
-        id="inicio"
-        class="hero">
-
-        <h1>
-            Bem-vindo à Bê Mania! 💙
-        </h1>
-
+        <h1>Bem-vindo à Bê Mania! 💙</h1>
 
         <p>
-            Bottons e imãs de geladeira
-            feitos com muito carinho! ✨
+            Bottons e imãs personalizados feitos
+            com muito carinho. ✨
         </p>
 
-
-        <a
-            href="#produtos"
-            class="botao">
-
-            Ver produtos
-
+        <a href="#produtos" class="botao">
+            🛍️ Ver produtos
         </a>
 
     </section>
 
 
+    <!-- ========================================
+         🔎 PESQUISA
+    ======================================== -->
 
-    <!-- PRODUTOS -->
+    <section class="pesquisa">
+
+        <input
+            type="text"
+            id="campo-busca"
+            placeholder="🔎 Procurar um produto..."
+        >
+
+    </section>
+
+
+    <!-- ========================================
+         🛍️ PRODUTOS
+    ======================================== -->
 
     <section id="produtos">
 
-        <h2>
-            Nossos produtos 🛍️
-        </h2>
-
-
-        <!-- BUSCA -->
-
-        <div class="busca-produtos">
-
-            <input
-                type="text"
-                id="campo-busca"
-                placeholder="🔎 Digite o nome do produto..."
-                autocomplete="off">
-
-        </div>
-
-
-
-        <!-- ABAS -->
+        <h2>🛍️ Nossos produtos</h2>
 
         <div class="abas">
 
             <button
                 class="aba ativa"
                 onclick="mostrarCategoria('bottons')">
-
                 🔵 Bottons
-
             </button>
-
 
             <button
                 class="aba"
                 onclick="mostrarCategoria('imas')">
-
-                🧲 Imãs de geladeira
-
+                🧲 Imãs
             </button>
 
         </div>
 
 
-
         <!-- BOTTONS -->
 
-        <div
-            id="bottons"
-            class="categoria ativa">
-
-            <h2>
-                🔵 Bottons
-            </h2>
-
+        <div id="bottons" class="categoria ativa">
 
             <div class="produtos">
 
+
+                <!-- BOTTON 32 -->
 
                 <div class="produto">
 
@@ -147,26 +110,25 @@
                         🔵
                     </div>
 
-                    <h3>
-                        Botton 32mm
-                    </h3>
+                    <h3>Botton 32mm</h3>
 
-                    <strong>
-                        R$ 2,50
-                    </strong>
+                    <p>
+                        Botton personalizado de 32mm.
+                    </p>
+
+                    <strong>R$ 2,50</strong>
 
                     <button
                         class="adicionar"
                         data-nome="Botton 32mm"
                         data-preco="2.50">
-
-                        🛒 Adicionar ao carrinho
-
+                        🛒 Adicionar
                     </button>
 
                 </div>
 
 
+                <!-- KIT 32 -->
 
                 <div class="produto">
 
@@ -174,26 +136,25 @@
                         🔵🔵🔵🔵
                     </div>
 
-                    <h3>
-                        Kit com 4 bottons 32mm
-                    </h3>
+                    <h3>Kit com 4 bottons 32mm</h3>
 
-                    <strong>
-                        R$ 10,00
-                    </strong>
+                    <p>
+                        Kit com 4 bottons personalizados.
+                    </p>
+
+                    <strong>R$ 10,00</strong>
 
                     <button
                         class="adicionar"
                         data-nome="Kit com 4 bottons 32mm"
-                        data-preco="10.00">
-
-                        🛒 Adicionar ao carrinho
-
+                        data-preco="10">
+                        🛒 Adicionar
                     </button>
 
                 </div>
 
 
+                <!-- BOTTON 44 -->
 
                 <div class="produto">
 
@@ -201,26 +162,25 @@
                         🔵
                     </div>
 
-                    <h3>
-                        Botton 44mm
-                    </h3>
+                    <h3>Botton 44mm</h3>
 
-                    <strong>
-                        R$ 4,00
-                    </strong>
+                    <p>
+                        Botton personalizado de 44mm.
+                    </p>
+
+                    <strong>R$ 4,00</strong>
 
                     <button
                         class="adicionar"
                         data-nome="Botton 44mm"
-                        data-preco="4.00">
-
-                        🛒 Adicionar ao carrinho
-
+                        data-preco="4">
+                        🛒 Adicionar
                     </button>
 
                 </div>
 
 
+                <!-- KIT 44 -->
 
                 <div class="produto">
 
@@ -228,59 +188,53 @@
                         🔵🔵🔵🔵
                     </div>
 
-                    <h3>
-                        Kit com 4 bottons 44mm
-                    </h3>
+                    <h3>Kit com 4 bottons 44mm</h3>
 
-                    <strong>
-                        R$ 12,00
-                    </strong>
+                    <p>
+                        Kit com 4 bottons personalizados.
+                    </p>
+
+                    <strong>R$ 12,00</strong>
 
                     <button
                         class="adicionar"
                         data-nome="Kit com 4 bottons 44mm"
-                        data-preco="12.00">
-
-                        🛒 Adicionar ao carrinho
-
+                        data-preco="12">
+                        🛒 Adicionar
                     </button>
 
                 </div>
 
 
-
-                <!-- BOTTON 58MM -->
+                <!-- BOTTON 58 -->
 
                 <div class="produto">
 
-                    <div class="produto-imagem">
+                    <img
+                        src="bottons-58mm.png"
+                        alt="Bottons 58mm da Bê Mania"
+                        class="produto-imagem"
+                    >
 
-                        <img
-                            src="bottons-58mm.png"
-                            alt="Bottons de 58mm da Bê Mania">
+                    <h3>Botton 58mm</h3>
 
-                    </div>
+                    <p>
+                        Botton personalizado de 58mm.
+                    </p>
 
-                    <h3>
-                        Botton 58mm
-                    </h3>
-
-                    <strong>
-                        R$ 4,00
-                    </strong>
+                    <strong>R$ 4,00</strong>
 
                     <button
                         class="adicionar"
                         data-nome="Botton 58mm"
-                        data-preco="4.00">
-
-                        🛒 Adicionar ao carrinho
-
+                        data-preco="4">
+                        🛒 Adicionar
                     </button>
 
                 </div>
 
 
+                <!-- KIT 58 -->
 
                 <div class="produto">
 
@@ -288,45 +242,36 @@
                         🔵🔵🔵🔵
                     </div>
 
-                    <h3>
-                        Kit com 4 bottons 58mm
-                    </h3>
+                    <h3>Kit com 4 bottons 58mm</h3>
 
-                    <strong>
-                        R$ 12,00
-                    </strong>
+                    <p>
+                        Kit com 4 bottons personalizados.
+                    </p>
+
+                    <strong>R$ 12,00</strong>
 
                     <button
                         class="adicionar"
                         data-nome="Kit com 4 bottons 58mm"
-                        data-preco="12.00">
-
-                        🛒 Adicionar ao carrinho
-
+                        data-preco="12">
+                        🛒 Adicionar
                     </button>
 
                 </div>
-
 
             </div>
 
         </div>
 
 
-
         <!-- IMÃS -->
 
-        <div
-            id="imas"
-            class="categoria">
-
-            <h2>
-                🧲 Imãs de geladeira
-            </h2>
-
+        <div id="imas" class="categoria">
 
             <div class="produtos">
 
+
+                <!-- IMÃ -->
 
                 <div class="produto">
 
@@ -334,26 +279,25 @@
                         🧲
                     </div>
 
-                    <h3>
-                        1 Imã de geladeira
-                    </h3>
+                    <h3>1 Imã de geladeira</h3>
 
-                    <strong>
-                        R$ 10,00
-                    </strong>
+                    <p>
+                        Imã personalizado para sua geladeira.
+                    </p>
+
+                    <strong>R$ 10,00</strong>
 
                     <button
                         class="adicionar"
                         data-nome="1 Imã de geladeira"
-                        data-preco="10.00">
-
-                        🛒 Adicionar ao carrinho
-
+                        data-preco="10">
+                        🛒 Adicionar
                     </button>
 
                 </div>
 
 
+                <!-- KIT 3 IMÃS -->
 
                 <div class="produto">
 
@@ -361,26 +305,25 @@
                         🧲🧲🧲
                     </div>
 
-                    <h3>
-                        Kit com 3 imãs
-                    </h3>
+                    <h3>Kit com 3 imãs</h3>
 
-                    <strong>
-                        R$ 25,00
-                    </strong>
+                    <p>
+                        Kit com 3 imãs personalizados.
+                    </p>
+
+                    <strong>R$ 25,00</strong>
 
                     <button
                         class="adicionar"
                         data-nome="Kit com 3 imãs"
-                        data-preco="25.00">
-
-                        🛒 Adicionar ao carrinho
-
+                        data-preco="25">
+                        🛒 Adicionar
                     </button>
 
                 </div>
 
 
+                <!-- KIT 10 IMÃS -->
 
                 <div class="produto">
 
@@ -388,25 +331,22 @@
                         🧲🧲🧲🧲🧲
                     </div>
 
-                    <h3>
-                        Kit com 10 imãs
-                    </h3>
+                    <h3>Kit com 10 imãs</h3>
 
-                    <strong>
-                        R$ 75,00
-                    </strong>
+                    <p>
+                        Kit com 10 imãs personalizados.
+                    </p>
+
+                    <strong>R$ 75,00</strong>
 
                     <button
                         class="adicionar"
                         data-nome="Kit com 10 imãs"
-                        data-preco="75.00">
-
-                        🛒 Adicionar ao carrinho
-
+                        data-preco="75">
+                        🛒 Adicionar
                     </button>
 
                 </div>
-
 
             </div>
 
@@ -415,18 +355,16 @@
     </section>
 
 
-
-    <!-- 🎨 PERSONALIZE -->
+    <!-- ========================================
+         🎨 PERSONALIZE
+    ======================================== -->
 
     <section id="personalize">
 
-        <h2>
-            🎨 Personalize seu produto
-        </h2>
-
+        <h2>🎨 Personalize seu produto</h2>
 
         <p class="subtitulo-personalize">
-            Seu momento, sua ideia, do seu jeito! 💙
+            Faça seu produto do jeitinho que você quiser! 💙
         </p>
 
 
@@ -439,21 +377,14 @@
                     1
                 </div>
 
-                <div>
+                <h3>Escolha seu produto</h3>
 
-                    <h3>
-                        🛍️ Escolha seu produto
-                    </h3>
-
-                    <p>
-                        Escolha o produto, o tamanho
-                        e a quantidade que você deseja.
-                    </p>
-
-                </div>
+                <p>
+                    Escolha entre bottons ou imãs
+                    e selecione o tamanho ou kit.
+                </p>
 
             </div>
-
 
 
             <div class="etapa-personalizacao">
@@ -462,21 +393,14 @@
                     2
                 </div>
 
-                <div>
+                <h3>Envie suas fotos</h3>
 
-                    <h3>
-                        📸 Envie suas fotos
-                    </h3>
-
-                    <p>
-                        Envie suas imagens pelo WhatsApp.
-                        Prefira fotos com boa qualidade.
-                    </p>
-
-                </div>
+                <p>
+                    Escolha as imagens que deseja
+                    usar na sua personalização.
+                </p>
 
             </div>
-
 
 
             <div class="etapa-personalizacao">
@@ -485,21 +409,14 @@
                     3
                 </div>
 
-                <div>
+                <h3>Faça seu pedido</h3>
 
-                    <h3>
-                        💬 Faça seu pedido
-                    </h3>
-
-                    <p>
-                        Confira seu carrinho e envie
-                        o pedido pelo WhatsApp.
-                    </p>
-
-                </div>
+                <p>
+                    Adicione os produtos ao carrinho
+                    e envie seu pedido pelo WhatsApp.
+                </p>
 
             </div>
-
 
 
             <div class="etapa-personalizacao">
@@ -508,35 +425,25 @@
                     4
                 </div>
 
-                <div>
+                <h3>Produção e entrega</h3>
 
-                    <h3>
-                        📦 Produção e entrega
-                    </h3>
-
-                    <p>
-                        Seu pedido será produzido
-                        com muito carinho e a entrega
-                        será combinada com você.
-                    </p>
-
-                </div>
+                <p>
+                    Depois de combinar os detalhes,
+                    seu pedido será preparado.
+                </p>
 
             </div>
-
 
         </div>
 
 
         <div class="personalize-final">
 
-            <h3>
-                💙 Seu momento, sua ideia, do seu jeito!
-            </h3>
+            <h3>✨ Pronto!</h3>
 
             <p>
-                Escolha seu produto, prepare sua imagem
-                e deixe o resto com a Bê Mania. ✨
+                Agora é só escolher seus produtos
+                e começar a personalizar.
             </p>
 
         </div>
@@ -544,15 +451,13 @@
     </section>
 
 
-
-    <!-- 🎁 MONTE SEU KIT -->
+    <!-- ========================================
+         🎁 MONTE SEU KIT
+    ======================================== -->
 
     <section id="monte-kit">
 
-        <h2>
-            🎁 Monte seu kit
-        </h2>
-
+        <h2>🎁 Monte seu kit</h2>
 
         <p class="subtitulo-personalize">
             Escolha uma opção e adicione seu kit ao carrinho! 💙
@@ -562,158 +467,121 @@
         <div class="montador-kit">
 
 
-            <!-- BOTTON 32 -->
+            <!-- KIT 32 -->
 
             <div class="opcao-kit">
 
-                <h3>
-                    🔵 Kit com 4 bottons 32mm
-                </h3>
+                <h3>🔵 Kit com 4 bottons 32mm</h3>
 
                 <p>
                     4 bottons personalizados
                 </p>
 
-                <strong>
-                    R$ 10,00
-                </strong>
+                <strong>R$ 10,00</strong>
 
                 <button
                     class="adicionar-kit"
                     data-nome="Kit com 4 bottons 32mm"
                     data-preco="10">
-
                     🛒 Adicionar kit
-
                 </button>
 
             </div>
 
 
-
-            <!-- BOTTON 44 -->
+            <!-- KIT 44 -->
 
             <div class="opcao-kit">
 
-                <h3>
-                    🔵 Kit com 4 bottons 44mm
-                </h3>
+                <h3>🔵 Kit com 4 bottons 44mm</h3>
 
                 <p>
                     4 bottons personalizados
                 </p>
 
-                <strong>
-                    R$ 12,00
-                </strong>
+                <strong>R$ 12,00</strong>
 
                 <button
                     class="adicionar-kit"
                     data-nome="Kit com 4 bottons 44mm"
                     data-preco="12">
-
                     🛒 Adicionar kit
-
                 </button>
 
             </div>
 
 
-
-            <!-- BOTTON 58 -->
+            <!-- KIT 58 -->
 
             <div class="opcao-kit">
 
-                <h3>
-                    🔵 Kit com 4 bottons 58mm
-                </h3>
+                <h3>🔵 Kit com 4 bottons 58mm</h3>
 
                 <p>
                     4 bottons personalizados
                 </p>
 
-                <strong>
-                    R$ 12,00
-                </strong>
+                <strong>R$ 12,00</strong>
 
                 <button
                     class="adicionar-kit"
                     data-nome="Kit com 4 bottons 58mm"
                     data-preco="12">
-
                     🛒 Adicionar kit
-
                 </button>
 
             </div>
 
 
-
-            <!-- IMÃ 3 -->
+            <!-- KIT 3 IMÃS -->
 
             <div class="opcao-kit">
 
-                <h3>
-                    🧲 Kit com 3 imãs
-                </h3>
+                <h3>🧲 Kit com 3 imãs</h3>
 
                 <p>
                     3 imãs personalizados
                 </p>
 
-                <strong>
-                    R$ 25,00
-                </strong>
+                <strong>R$ 25,00</strong>
 
                 <button
                     class="adicionar-kit"
                     data-nome="Kit com 3 imãs"
                     data-preco="25">
-
                     🛒 Adicionar kit
-
                 </button>
 
             </div>
 
 
-
-            <!-- IMÃ 10 -->
+            <!-- KIT 10 IMÃS -->
 
             <div class="opcao-kit">
 
-                <h3>
-                    🧲 Kit com 10 imãs
-                </h3>
+                <h3>🧲 Kit com 10 imãs</h3>
 
                 <p>
                     10 imãs personalizados
                 </p>
 
-                <strong>
-                    R$ 75,00
-                </strong>
+                <strong>R$ 75,00</strong>
 
                 <button
                     class="adicionar-kit"
                     data-nome="Kit com 10 imãs"
                     data-preco="75">
-
                     🛒 Adicionar kit
-
                 </button>
 
             </div>
-
 
         </div>
 
 
         <div class="kit-info">
 
-            <h3>
-                📸 Depois de escolher seu kit...
-            </h3>
+            <h3>📸 Depois de escolher seu kit...</h3>
 
             <p>
                 Envie as imagens que você deseja usar
@@ -725,66 +593,98 @@
 
     </section>
 
-<!-- ❤️ POR QUE COMPRAR -->
 
-<section id="por-que-comprar">
+    <!-- ========================================
+         ❤️ POR QUE COMPRAR
+    ======================================== -->
 
-    <h2>❤️ Por que comprar na Bê Mania?</h2>
+    <section id="por-que-comprar">
 
-    <p class="subtitulo-personalize">
-        Produtos feitos com carinho e do jeitinho que você quiser! 💙
-    </p>
+        <h2>❤️ Por que comprar na Bê Mania?</h2>
 
-    <div class="motivos">
+        <p class="subtitulo-personalize">
+            Produtos feitos com carinho e do jeitinho que você quiser! 💙
+        </p>
 
-        <div class="motivo">
-            <div class="icone-motivo">💙</div>
-            <h3>Feito com carinho</h3>
-            <p>
-                Cada produto é preparado com muito cuidado
-                para deixar seu pedido especial.
-            </p>
+
+        <div class="motivos">
+
+
+            <div class="motivo">
+
+                <div class="icone-motivo">
+                    💙
+                </div>
+
+                <h3>Feito com carinho</h3>
+
+                <p>
+                    Cada produto é preparado com muito
+                    cuidado para deixar seu pedido especial.
+                </p>
+
+            </div>
+
+
+            <div class="motivo">
+
+                <div class="icone-motivo">
+                    🎨
+                </div>
+
+                <h3>Personalizado</h3>
+
+                <p>
+                    Você pode escolher as imagens e criar
+                    produtos do seu jeito.
+                </p>
+
+            </div>
+
+
+            <div class="motivo">
+
+                <div class="icone-motivo">
+                    ✨
+                </div>
+
+                <h3>Produtos únicos</h3>
+
+                <p>
+                    Transforme suas imagens favoritas em
+                    bottons e imãs personalizados.
+                </p>
+
+            </div>
+
+
+            <div class="motivo">
+
+                <div class="icone-motivo">
+                    📦
+                </div>
+
+                <h3>Pedido fácil</h3>
+
+                <p>
+                    Escolha seus produtos, monte seu carrinho
+                    e envie seu pedido pelo WhatsApp.
+                </p>
+
+            </div>
+
         </div>
 
-        <div class="motivo">
-            <div class="icone-motivo">🎨</div>
-            <h3>Personalizado</h3>
-            <p>
-                Você pode escolher as imagens e criar
-                produtos do seu jeito.
-            </p>
-        </div>
+    </section>
 
-        <div class="motivo">
-            <div class="icone-motivo">✨</div>
-            <h3>Produtos únicos</h3>
-            <p>
-                Transforme suas imagens favoritas em
-                bottons e imãs personalizados.
-            </p>
-        </div>
 
-        <div class="motivo">
-            <div class="icone-motivo">📦</div>
-            <h3>Pedido fácil</h3>
-            <p>
-                Escolha seus produtos, monte seu carrinho
-                e envie seu pedido pelo WhatsApp.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- 🛒 CARRINHO -->
+    <!-- ========================================
+         🛒 CARRINHO
+    ======================================== -->
 
     <section id="carrinho">
 
-        <h2>
-            🛒 Seu carrinho
-        </h2>
-
+        <h2>🛒 Seu carrinho</h2>
 
         <div id="lista-carrinho">
 
@@ -795,169 +695,210 @@
         </div>
 
 
-        <h3>
+        <div class="total-carrinho">
 
-            Total:
+            <h3>
+                Total:
+                <span id="total">R$ 0,00</span>
+            </h3>
 
-            <span id="total">
-                R$ 0,00
-            </span>
-
-        </h3>
-
-
-        <button
-            id="finalizar"
-            class="botao">
-
-            💬 Finalizar pedido pelo WhatsApp
-
-        </button>
-
-    </section>
-
-
-
-    <!-- 📦 COMO PEDIR -->
-
-    <section id="como-pedir">
-
-        <h2>
-            📦 Como pedir
-        </h2>
-
-
-        <div class="passos">
-
-
-            <div>
-
-                <span>
-                    1️⃣
-                </span>
-
-                <h3>
-                    Escolha seus produtos
-                </h3>
-
-                <p>
-                    Adicione os produtos que você
-                    deseja ao carrinho.
-                </p>
-
-            </div>
-
-
-
-            <div>
-
-                <span>
-                    2️⃣
-                </span>
-
-                <h3>
-                    Confira seu carrinho
-                </h3>
-
-                <p>
-                    Veja os produtos, quantidades
-                    e o valor total.
-                </p>
-
-            </div>
-
-
-
-            <div>
-
-                <span>
-                    3️⃣
-                </span>
-
-                <h3>
-                    Envie pelo WhatsApp
-                </h3>
-
-                <p>
-                    Clique em finalizar pedido
-                    e envie sua mensagem.
-                </p>
-
-            </div>
-
+            <button
+                id="finalizar"
+                class="botao">
+                💬 Finalizar pelo WhatsApp
+            </button>
 
         </div>
 
     </section>
 
 
+    <!-- ========================================
+         📋 COMO PEDIR
+    ======================================== -->
 
-    <!-- 📱 CONTATO -->
+    <section id="como-pedir">
 
-    <section id="contato">
-
-        <h2>
-            📱 Entre em contato
-        </h2>
-
-
-        <p>
-            Ficou com alguma dúvida?
-            Fale com a Bê Mania!
-        </p>
+        <h2>📋 Como pedir?</h2>
 
 
-        <a
-            href="https://wa.me/555591927947"
-            target="_blank"
-            class="botao">
+        <div class="como-pedir-container">
 
-            💬 WhatsApp
 
-        </a>
+            <div class="como-pedir-card">
+
+                <span>1️⃣</span>
+
+                <h3>Escolha seus produtos</h3>
+
+                <p>
+                    Navegue pelos produtos e escolha
+                    os bottons ou imãs que deseja.
+                </p>
+
+            </div>
+
+
+            <div class="como-pedir-card">
+
+                <span>2️⃣</span>
+
+                <h3>Adicione ao carrinho</h3>
+
+                <p>
+                    Clique em adicionar e monte
+                    seu pedido.
+                </p>
+
+            </div>
+
+
+            <div class="como-pedir-card">
+
+                <span>3️⃣</span>
+
+                <h3>Finalize</h3>
+
+                <p>
+                    Clique em finalizar e envie
+                    seu pedido pelo WhatsApp.
+                </p>
+
+            </div>
+
+
+            <div class="como-pedir-card">
+
+                <span>4️⃣</span>
+
+                <h3>Combine os detalhes</h3>
+
+                <p>
+                    Envie suas imagens e combine
+                    os detalhes do pedido.
+                </p>
+
+            </div>
+
+        </div>
 
     </section>
 
 
+    <!-- ========================================
+         📞 CONTATO
+    ======================================== -->
 
-    <!-- RODAPÉ -->
+    <section id="contato">
+
+        <h2>📞 Fale com a Bê Mania</h2>
+
+        <p class="subtitulo-contato">
+            Ficou com alguma dúvida ou quer fazer seu pedido? 💙
+        </p>
+
+
+        <div class="contato-caixa">
+
+
+            <div class="contato-info">
+
+                <div class="icone-contato">
+                    💬
+                </div>
+
+                <h3>
+                    Fale com a gente pelo WhatsApp
+                </h3>
+
+                <p>
+                    Entre em contato para tirar dúvidas,
+                    enviar suas imagens e combinar os
+                    detalhes do seu pedido.
+                </p>
+
+                <a
+                    href="https://wa.me/555591927947"
+                    target="_blank"
+                    class="botao-whatsapp">
+                    💬 Chamar no WhatsApp
+                </a>
+
+            </div>
+
+
+            <div class="contato-info">
+
+                <div class="icone-contato">
+                    🎨
+                </div>
+
+                <h3>
+                    Produtos personalizados
+                </h3>
+
+                <p>
+                    Escolha seus bottons ou imãs e envie
+                    suas imagens para deixar seu pedido
+                    do seu jeito.
+                </p>
+
+                <a
+                    href="#personalize"
+                    class="botao-contato">
+                    🎨 Personalizar meu produto
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================================
+         🔻 RODAPÉ
+    ======================================== -->
 
     <footer>
 
         <p>
-            © 2026 Bê Mania 💙
+            💙 Bê Mania — Bottons e imãs personalizados
         </p>
 
         <p>
-            Feitos com muito carinho ✨
+            Feitos com muito carinho. ✨
         </p>
 
     </footer>
 
 
-
-    <!-- 🔵 ABAS -->
+    <!-- ========================================
+         📜 JAVASCRIPT DAS ABAS
+    ======================================== -->
 
     <script>
 
         function mostrarCategoria(categoria) {
 
-            document
-                .querySelectorAll(".categoria")
-                .forEach(function(elemento) {
+            const categorias =
+                document.querySelectorAll(".categoria");
 
-                    elemento.classList.remove("ativa");
+            categorias.forEach(function (item) {
 
-                });
+                item.classList.remove("ativa");
+
+            });
 
 
-            document
-                .querySelectorAll(".aba")
-                .forEach(function(botao) {
+            const abas =
+                document.querySelectorAll(".aba");
 
-                    botao.classList.remove("ativa");
+            abas.forEach(function (item) {
 
-                });
+                item.classList.remove("ativa");
+
+            });
 
 
             document
@@ -967,18 +908,11 @@
 
             if (categoria === "bottons") {
 
-                document
-                    .querySelectorAll(".aba")[0]
-                    .classList.add("ativa");
+                abas[0].classList.add("ativa");
 
-            }
+            } else {
 
-
-            if (categoria === "imas") {
-
-                document
-                    .querySelectorAll(".aba")[1]
-                    .classList.add("ativa");
+                abas[1].classList.add("ativa");
 
             }
 
@@ -987,11 +921,11 @@
     </script>
 
 
-
-    <!-- 🛒🔎 SCRIPT -->
+    <!-- ========================================
+         🧠 SCRIPT PRINCIPAL
+    ======================================== -->
 
     <script src="script.js"></script>
-
 
 </body>
 
