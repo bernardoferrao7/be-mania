@@ -13,10 +13,7 @@ html {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-
-    /* 🌑 FUNDO PRETO */
     background: #000;
-
     color: #f5f5f5;
 }
 
@@ -27,7 +24,6 @@ body {
 
 header {
     background: #050505;
-
     padding: 20px 40px;
 
     display: flex;
@@ -36,7 +32,6 @@ header {
 
     position: sticky;
     top: 0;
-
     z-index: 1000;
 
     border-bottom: 1px solid #12345a;
@@ -48,7 +43,6 @@ header {
 .logo {
     font-size: 28px;
     font-weight: bold;
-
     color: #008cff;
 
     text-shadow:
@@ -62,16 +56,13 @@ nav {
 
 nav a {
     text-decoration: none;
-
     color: #008cff;
-
     font-weight: bold;
-
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #ffffff;
+    color: #fff;
 
     text-shadow:
         0 0 10px #008cff;
@@ -84,15 +75,12 @@ nav a:hover {
 
 section {
     max-width: 1100px;
-
     margin: 30px auto;
-
     padding: 50px 30px;
 
     background: #050505;
 
     border: 1px solid #111;
-
     border-radius: 25px;
 
     box-shadow:
@@ -117,23 +105,20 @@ section h2 {
 
 #inicio {
     text-align: center;
-
     padding: 80px 30px;
 }
 
-#inicio h2 {
+#inicio h1 {
     font-size: 40px;
-
     margin-bottom: 15px;
 }
 
 #inicio p {
     font-size: 20px;
-
     color: #ccc;
 }
 
-.botao-principal {
+.botao {
     display: inline-block;
 
     margin-top: 20px;
@@ -141,7 +126,6 @@ section h2 {
     padding: 14px 25px;
 
     background: #008cff;
-
     color: white;
 
     text-decoration: none;
@@ -156,7 +140,7 @@ section h2 {
         0 0 15px rgba(0, 140, 255, 0.4);
 }
 
-.botao-principal:hover {
+.botao:hover {
     transform: translateY(-3px);
 
     background: #00a2ff;
@@ -168,24 +152,67 @@ section h2 {
 
 
 /* =========================
-   IMAGEM DOS PRODUTOS
+   ABAS
 ========================= */
 
-.imagem-produtos {
-    text-align: center;
+.abas {
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
 
     margin: 30px 0;
 }
 
-.imagem-produtos img {
-    width: 100%;
+.aba {
+    padding: 14px 25px;
 
-    max-width: 850px;
+    border: 1px solid #12345a;
 
-    border-radius: 20px;
+    border-radius: 12px;
+
+    background: #080808;
+
+    color: #008cff;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.aba:hover {
+    border-color: #008cff;
 
     box-shadow:
-        0 0 20px rgba(0, 140, 255, 0.2);
+        0 0 15px rgba(0, 140, 255, 0.5);
+}
+
+.aba.ativa {
+    background: #008cff;
+    color: white;
+
+    border-color: #008cff;
+
+    box-shadow:
+        0 0 15px rgba(0, 140, 255, 0.8),
+        0 0 30px rgba(0, 140, 255, 0.3);
+}
+
+
+/* =========================
+   CATEGORIAS
+========================= */
+
+.categoria {
+    display: none;
+}
+
+.categoria.ativa {
+    display: block;
 }
 
 
@@ -193,7 +220,7 @@ section h2 {
    CARDS DOS PRODUTOS
 ========================= */
 
-.produtos-container {
+.produtos {
     display: grid;
 
     grid-template-columns:
@@ -223,7 +250,7 @@ section h2 {
 }
 
 
-/* 💙 BRILHO AZUL AO PASSAR O MOUSE */
+/* BRILHO AZUL */
 
 .produto:hover {
     transform: translateY(-6px);
@@ -236,20 +263,52 @@ section h2 {
         0 0 60px rgba(0, 140, 255, 0.3);
 }
 
+
+/* =========================
+   IMAGENS DOS PRODUTOS
+========================= */
+
 .produto-imagem {
-    font-size: 60px;
+    width: 100%;
+    height: 220px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
 
     background: #050b14;
 
     border-radius: 18px;
 
-    padding: 20px;
-
     margin-bottom: 20px;
+
+    padding: 10px;
 }
 
+.produto-imagem img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
+
+/* =========================
+   TEXTO DOS PRODUTOS
+========================= */
+
 .produto h3 {
-    color: #ffffff;
+    color: #fff;
 
     font-size: 20px;
 }
@@ -259,6 +318,10 @@ section h2 {
 }
 
 .produto strong {
+    display: block;
+
+    margin: 10px 0;
+
     font-size: 22px;
 
     color: #0099ff;
@@ -343,7 +406,6 @@ section h2 {
 
 .item-carrinho h3 {
     margin-right: auto;
-
     color: white;
 }
 
@@ -406,7 +468,7 @@ section h2 {
     display: grid;
 
     grid-template-columns:
-        repeat(4, 1fr);
+        repeat(3, 1fr);
 
     gap: 20px;
 }
@@ -432,10 +494,12 @@ section h2 {
         0 0 20px rgba(0, 140, 255, 0.35);
 }
 
-.passos strong {
-    color: #008cff;
+.passos span {
+    font-size: 30px;
+}
 
-    font-size: 18px;
+.passos h3 {
+    color: white;
 }
 
 
@@ -470,6 +534,19 @@ section h2 {
 
 
 /* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #777;
+}
+
+
+/* =========================
    CELULAR
 ========================= */
 
@@ -497,40 +574,32 @@ section h2 {
         padding: 30px 20px;
     }
 
-    #inicio h2 {
+    #inicio h1 {
         font-size: 30px;
     }
 
-    .produtos-container {
+    .produtos {
         grid-template-columns: 1fr;
     }
 
     .passos {
         grid-template-columns: 1fr;
     }
-   /* =========================
-   TAMANHO DAS FOTOS DOS PRODUTOS
-========================= */
 
-.produto-imagem {
-    width: 100%;
-    height: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 12px;
-}
+    .abas {
+        flex-direction: column;
+    }
 
-.produto-imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-}
+    .aba {
+        width: 100%;
+    }
+
+    .produto-imagem {
+        height: 200px;
+    }
 
     .item-carrinho {
         flex-wrap: wrap;
     }
+
 }
