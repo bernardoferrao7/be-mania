@@ -1,14 +1,13 @@
 // ========================================
-// 🛒🔎 BÊ MANIA — CARRINHO + BUSCA
+// 🛒🔎 BÊ MANIA — CARRINHO + BUSCA + KITS
 // ========================================
 
 document.addEventListener("DOMContentLoaded", function () {
 
     let carrinho = [];
 
-
     // ========================================
-    // 🛒 BOTÕES DE ADICIONAR
+    // 🛒 BOTÕES DOS PRODUTOS NORMAIS
     // ========================================
 
     const botoes = document.querySelectorAll(".adicionar");
@@ -18,107 +17,104 @@ document.addEventListener("DOMContentLoaded", function () {
         botao.addEventListener("click", function () {
 
             const produto = botao.getAttribute("data-nome");
+            const preco = Number(botao.getAttribute("data-preco"));
 
-            const preco = Number(
-                botao.getAttribute("data-preco")
-            );
-
-
-            const itemExistente = carrinho.find(function (item) {
-
-                return item.nome === produto;
-
-            });
-
-
-            if (itemExistente) {
-
-                itemExistente.quantidade++;
-
-            } else {
-
-                carrinho.push({
-
-                    nome: produto,
-                    preco: preco,
-                    quantidade: 1
-
-                });
-
-            }
-
-
-            atualizarCarrinho();
-
+            adicionarAoCarrinho(produto, preco);
         });
 
     });
 
 
     // ========================================
-    // 🔄 ATUALIZAR CARRINHO
+    // 🎁 BOTÕES DOS KITS
+    // ========================================
+
+    const botoesKit = document.querySelectorAll(".adicionar-kit");
+
+    botoesKit.forEach(function (botao) {
+
+        botao.addEventListener("click", function () {
+
+            const produto = botao.getAttribute("data-nome");
+            const preco = Number(botao.getAttribute("data-preco"));
+
+            adicionarAoCarrinho(produto, preco);
+        });
+
+    });
+
+
+    // ========================================
+    // ➕ ADICIONAR AO CARRINHO
+    // ========================================
+
+    function adicionarAoCarrinho(produto, preco) {
+
+        const itemExistente = carrinho.find(function (item) {
+            return item.nome === produto;
+        });
+
+        if (itemExistente) {
+
+            itemExistente.quantidade++;
+
+        } else {
+
+            carrinho.push({
+                nome: produto,
+                preco: preco,
+                quantidade: 1
+            });
+
+        }
+
+        atualizarCarrinho();
+    }
+
+
+    // ========================================
+    // 🛒 ATUALIZAR CARRINHO
     // ========================================
 
     function atualizarCarrinho() {
 
-        const lista =
-            document.getElementById("lista-carrinho");
+        const lista = document.getElementById("lista-carrinho");
+        const totalElemento = document.getElementById("total");
 
-        const totalElemento =
-            document.getElementById("total");
-
+        if (!lista || !totalElemento) return;
 
         lista.innerHTML = "";
-
 
         let total = 0;
 
 
         if (carrinho.length === 0) {
 
-            lista.innerHTML =
-                "<p>Seu carrinho está vazio. 🛒</p>";
+            lista.innerHTML = "<p>Seu carrinho está vazio. 🛒</p>";
 
-            totalElemento.textContent =
-                "R$ 0,00";
+            totalElemento.textContent = "R$ 0,00";
 
             return;
-
         }
 
 
         carrinho.forEach(function (item, indice) {
 
-            const subtotal =
-                item.preco * item.quantidade;
-
+            const subtotal = item.preco * item.quantidade;
 
             total += subtotal;
 
 
-            const div =
-                document.createElement("div");
+            const div = document.createElement("div");
 
-
-            div.className =
-                "item-carrinho";
+            div.className = "item-carrinho";
 
 
             div.innerHTML = `
-
                 <div>
-
-                    <h3>
-                        ${item.nome}
-                    </h3>
-
-                    <p>
-                        R$ ${formatarPreco(item.preco)}
-                        cada
-                    </p>
-
+                    <h3>${item.nome}</h3>
+                    <p>R$ ${formatarPreco(item.preco)} cada</p>
                 </div>
-
 
                 <div>
 
@@ -127,46 +123,31 @@ document.addEventListener("DOMContentLoaded", function () {
                         class="quantidade"
                         data-acao="diminuir"
                         data-indice="${indice}">
-
                         ➖
-
                     </button>
 
-
-                    <span>
-                        ${item.quantidade}
-                    </span>
-
+                    <span>${item.quantidade}</span>
 
                     <button
                         type="button"
                         class="quantidade"
                         data-acao="aumentar"
                         data-indice="${indice}">
-
                         ➕
-
                     </button>
 
                 </div>
 
-
                 <strong>
-
                     R$ ${formatarPreco(subtotal)}
-
                 </strong>
-
 
                 <button
                     type="button"
                     class="remover"
                     data-indice="${indice}">
-
                     🗑️
-
                 </button>
-
             `;
 
 
@@ -179,9 +160,9 @@ document.addEventListener("DOMContentLoaded", function () {
             "R$ " + formatarPreco(total);
 
 
-        // Botão diminuir
-        document
-            .querySelectorAll('[data-acao="diminuir"]')
+        // ➖ DIMINUIR
+
+        document.querySelectorAll('[data-acao="diminuir"]')
             .forEach(function (botao) {
 
                 botao.addEventListener("click", function () {
@@ -196,9 +177,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
 
-        // Botão aumentar
-        document
-            .querySelectorAll('[data-acao="aumentar"]')
+        // ➕ AUMENTAR
+
+        document.querySelectorAll('[data-acao="aumentar"]')
             .forEach(function (botao) {
 
                 botao.addEventListener("click", function () {
@@ -213,9 +194,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
 
-        // Botão remover
-        document
-            .querySelectorAll(".remover")
+        // 🗑️ REMOVER
+
+        document.querySelectorAll(".remover")
             .forEach(function (botao) {
 
                 botao.addEventListener("click", function () {
@@ -246,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // ========================================
-    // ➕ AUMENTAR
+    // ➕ AUMENTAR QUANTIDADE
     // ========================================
 
     function aumentar(indice) {
@@ -259,20 +240,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // ========================================
-    // ➖ DIMINUIR
+    // ➖ DIMINUIR QUANTIDADE
     // ========================================
 
     function diminuir(indice) {
 
         carrinho[indice].quantidade--;
 
-
         if (carrinho[indice].quantidade <= 0) {
 
             carrinho.splice(indice, 1);
 
         }
-
 
         atualizarCarrinho();
 
@@ -293,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // ========================================
-    // 🔎 BUSCA
+    // 🔎 BUSCA DE PRODUTOS
     // ========================================
 
     const campoBusca =
@@ -302,71 +281,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (campoBusca) {
 
-        campoBusca.addEventListener(
-            "input",
-            function () {
+        campoBusca.addEventListener("input", function () {
 
-                const texto =
-                    campoBusca.value
-                        .toLowerCase()
-                        .normalize("NFD")
-                        .replace(/[\u0300-\u036f]/g, "")
-                        .trim();
+            const texto = campoBusca.value
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "")
+                .trim();
 
 
-                const produtos =
-                    document.querySelectorAll(".produto");
+            const produtos =
+                document.querySelectorAll(".produto");
 
 
-                produtos.forEach(function (produto) {
+            produtos.forEach(function (produto) {
 
-                    const nome =
-                        produto
-                            .querySelector("h3")
-                            .textContent
-                            .toLowerCase()
-                            .normalize("NFD")
-                            .replace(/[\u0300-\u036f]/g, "");
+                const titulo =
+                    produto.querySelector("h3");
+
+                if (!titulo) return;
 
 
-                    if (nome.includes(texto)) {
+                const nome = titulo.textContent
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "");
 
-                        produto.style.display = "";
 
-                    } else {
+                if (nome.includes(texto)) {
 
-                        produto.style.display = "none";
+                    produto.style.display = "";
 
-                    }
+                } else {
 
-                });
+                    produto.style.display = "none";
 
-            }
-        );
+                }
+
+            });
+
+        });
 
     }
 
 
     // ========================================
-    // 💬 FINALIZAR PEDIDO
+    // 💬 FINALIZAR PELO WHATSAPP
     // ========================================
 
     const finalizar =
         document.getElementById("finalizar");
 
 
-    finalizar.addEventListener(
-        "click",
-        function () {
+    if (finalizar) {
+
+        finalizar.addEventListener("click", function () {
 
             if (carrinho.length === 0) {
 
-                alert(
-                    "Seu carrinho está vazio! 🛒"
-                );
+                alert("Seu carrinho está vazio! 🛒");
 
                 return;
-
             }
 
 
@@ -387,22 +362,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 mensagem +=
-                    "🛍️ " +
-                    item.nome +
-                    "\n";
-
+                    "🛍️ " + item.nome + "\n";
 
                 mensagem +=
                     "Quantidade: " +
-                    item.quantidade +
-                    "\n";
-
+                    item.quantidade + "\n";
 
                 mensagem +=
                     "Preço: R$ " +
-                    formatarPreco(item.preco) +
-                    "\n";
-
+                    formatarPreco(item.preco) + "\n";
 
                 mensagem +=
                     "Subtotal: R$ " +
@@ -417,10 +385,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 formatarPreco(total);
 
 
-            // ========================================
-            // 📱 WHATSAPP DA BÊ MANIA
-            // ========================================
-
             const numero =
                 "555591927947";
 
@@ -432,17 +396,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 encodeURIComponent(mensagem);
 
 
-            window.open(
-                link,
-                "_blank"
-            );
+            window.open(link, "_blank");
 
-        }
-    );
+        });
+
+    }
 
 
     // ========================================
-    // 🚀 INICIAR
+    // 🚀 INICIAR CARRINHO
     // ========================================
 
     atualizarCarrinho();
