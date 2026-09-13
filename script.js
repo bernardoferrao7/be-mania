@@ -2,12 +2,11 @@
 // 🛒 CARRINHO DA BÊ MANIA
 // ========================================
 
-// Lista onde vamos guardar os produtos
 let carrinho = [];
 
 
 // ========================================
-// BOTÕES "ADICIONAR AO CARRINHO"
+// ➕ ADICIONAR PRODUTO
 // ========================================
 
 const botoes = document.querySelectorAll(".adicionar");
@@ -16,41 +15,27 @@ botoes.forEach(function(botao) {
 
     botao.addEventListener("click", function() {
 
-        // Pega o nome do produto
-        const produto =
-            botao.parentElement.querySelector("h3").textContent;
+        // Pega o nome diretamente do botão
+        const produto = botao.dataset.nome;
 
-        // Pega o preço
-        const textoPreco =
-            botao.parentElement.querySelector("strong").textContent;
-
-        // Transforma "R$ 10,00" em número
-        const preco =
-            parseFloat(
-                textoPreco
-                    .replace("R$", "")
-                    .replace(".", "")
-                    .replace(",", ".")
-            );
+        // Pega o preço diretamente do botão
+        const preco = parseFloat(botao.dataset.preco);
 
 
         // Verifica se o produto já está no carrinho
-        const itemExistente =
-            carrinho.find(function(item) {
+        const itemExistente = carrinho.find(function(item) {
 
-                return item.nome === produto;
+            return item.nome === produto;
 
-            });
+        });
 
 
         if (itemExistente) {
 
-            // Se já estiver, aumenta a quantidade
             itemExistente.quantidade++;
 
         } else {
 
-            // Se não estiver, adiciona
             carrinho.push({
 
                 nome: produto,
@@ -64,8 +49,11 @@ botoes.forEach(function(botao) {
         }
 
 
-        // Atualiza o carrinho
         atualizarCarrinho();
+
+
+        // Pequeno aviso
+        alert("🛒 " + produto + " foi adicionado ao carrinho!");
 
     });
 
@@ -73,7 +61,7 @@ botoes.forEach(function(botao) {
 
 
 // ========================================
-// ATUALIZAR CARRINHO
+// 🔄 ATUALIZAR CARRINHO
 // ========================================
 
 function atualizarCarrinho() {
@@ -85,14 +73,13 @@ function atualizarCarrinho() {
         document.getElementById("total");
 
 
-    // Limpa a lista
     lista.innerHTML = "";
 
 
     let total = 0;
 
 
-    // Se estiver vazio
+    // Carrinho vazio
     if (carrinho.length === 0) {
 
         lista.innerHTML =
@@ -106,18 +93,19 @@ function atualizarCarrinho() {
     }
 
 
-    // Percorre todos os produtos
+    // Mostrar produtos
     carrinho.forEach(function(item, indice) {
 
         const subtotal =
             item.preco * item.quantidade;
 
+
         total += subtotal;
 
 
-        // Cria o elemento do produto
         const div =
             document.createElement("div");
+
 
         div.className =
             "item-carrinho";
@@ -125,37 +113,53 @@ function atualizarCarrinho() {
 
         div.innerHTML = `
 
-            <h3>
-                ${item.nome}
-            </h3>
+            <div>
 
-            <p>
-                R$ ${item.preco
-                    .toFixed(2)
-                    .replace(".", ",")}
-            </p>
+                <h3>
+                    ${item.nome}
+                </h3>
 
+                <p>
+                    R$ ${formatarPreco(item.preco)}
+                    cada
+                </p>
 
-            <button
-                onclick="diminuir(${indice})">
-                ➖
-            </button>
+            </div>
 
 
-            <span>
-                ${item.quantidade}
-            </span>
+            <div>
+
+                <button
+                    onclick="diminuir(${indice})">
+                    ➖
+                </button>
 
 
-            <button
-                onclick="aumentar(${indice})">
-                ➕
-            </button>
+                <span>
+                    ${item.quantidade}
+                </span>
+
+
+                <button
+                    onclick="aumentar(${indice})">
+                    ➕
+                </button>
+
+            </div>
+
+
+            <strong>
+
+                R$ ${formatarPreco(subtotal)}
+
+            </strong>
 
 
             <button
                 onclick="remover(${indice})">
+
                 🗑️
+
             </button>
 
         `;
@@ -166,18 +170,27 @@ function atualizarCarrinho() {
     });
 
 
-    // Mostra o total
     totalElemento.textContent =
-        "R$ " +
-        total
-            .toFixed(2)
-            .replace(".", ",");
+        "R$ " + formatarPreco(total);
 
 }
 
 
 // ========================================
-// AUMENTAR QUANTIDADE
+// 💰 FORMATAR PREÇO
+// ========================================
+
+function formatarPreco(valor) {
+
+    return valor
+        .toFixed(2)
+        .replace(".", ",");
+
+}
+
+
+// ========================================
+// ➕ AUMENTAR QUANTIDADE
 // ========================================
 
 function aumentar(indice) {
@@ -190,7 +203,7 @@ function aumentar(indice) {
 
 
 // ========================================
-// DIMINUIR QUANTIDADE
+// ➖ DIMINUIR QUANTIDADE
 // ========================================
 
 function diminuir(indice) {
@@ -198,8 +211,6 @@ function diminuir(indice) {
     carrinho[indice].quantidade--;
 
 
-    // Se chegar a zero,
-    // remove o produto
     if (carrinho[indice].quantidade <= 0) {
 
         carrinho.splice(indice, 1);
@@ -213,7 +224,7 @@ function diminuir(indice) {
 
 
 // ========================================
-// REMOVER PRODUTO
+// 🗑️ REMOVER PRODUTO
 // ========================================
 
 function remover(indice) {
@@ -226,7 +237,7 @@ function remover(indice) {
 
 
 // ========================================
-// ENVIAR PEDIDO PELO WHATSAPP
+// 💬 FINALIZAR PEDIDO
 // ========================================
 
 document
@@ -234,7 +245,7 @@ document
     .addEventListener("click", function() {
 
 
-        // Verifica se o carrinho está vazio
+        // Verifica se está vazio
         if (carrinho.length === 0) {
 
             alert(
@@ -246,7 +257,6 @@ document
         }
 
 
-        // Começo da mensagem
         let mensagem =
             "Olá! Quero fazer um pedido na Bê Mania 😊\n\n";
 
@@ -254,7 +264,6 @@ document
         let total = 0;
 
 
-        // Adiciona cada produto à mensagem
         carrinho.forEach(function(item) {
 
             const subtotal =
@@ -277,32 +286,32 @@ document
 
 
             mensagem +=
+                "Preço: R$ " +
+                formatarPreco(item.preco) +
+                "\n";
+
+
+            mensagem +=
                 "Subtotal: R$ " +
-                subtotal
-                    .toFixed(2)
-                    .replace(".", ",") +
+                formatarPreco(subtotal) +
                 "\n\n";
 
         });
 
 
-        // Adiciona o total
         mensagem +=
             "💰 Total: R$ " +
-            total
-                .toFixed(2)
-                .replace(".", ",");
+            formatarPreco(total);
 
 
-        // ====================================
+        // ========================================
         // 📱 NÚMERO DO WHATSAPP
-        // ====================================
+        // ========================================
 
         const numero =
             "555591927947";
 
 
-        // Cria o link
         const link =
             "https://wa.me/" +
             numero +
@@ -310,7 +319,6 @@ document
             encodeURIComponent(mensagem);
 
 
-        // Abre o WhatsApp
         window.open(
             link,
             "_blank"
