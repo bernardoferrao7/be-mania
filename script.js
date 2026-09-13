@@ -1,12 +1,12 @@
 // ========================================
-// 🛒 CARRINHO DA BÊ MANIA
+// 🛒🔎 BÊ MANIA — CARRINHO + BUSCA
 // ========================================
 
 let carrinho = [];
 
 
 // ========================================
-// ➕ ADICIONAR PRODUTO
+// 🛒 ADICIONAR PRODUTO AO CARRINHO
 // ========================================
 
 const botoes = document.querySelectorAll(".adicionar");
@@ -15,14 +15,13 @@ botoes.forEach(function(botao) {
 
     botao.addEventListener("click", function() {
 
-        // Pega o nome diretamente do botão
         const produto = botao.dataset.nome;
 
-        // Pega o preço diretamente do botão
-        const preco = parseFloat(botao.dataset.preco);
+        const preco = parseFloat(
+            botao.dataset.preco
+        );
 
 
-        // Verifica se o produto já está no carrinho
         const itemExistente = carrinho.find(function(item) {
 
             return item.nome === produto;
@@ -52,8 +51,11 @@ botoes.forEach(function(botao) {
         atualizarCarrinho();
 
 
-        // Pequeno aviso
-        alert("🛒 " + produto + " foi adicionado ao carrinho!");
+        alert(
+            "🛒 " +
+            produto +
+            " foi adicionado ao carrinho!"
+        );
 
     });
 
@@ -149,17 +151,13 @@ function atualizarCarrinho() {
 
 
             <strong>
-
                 R$ ${formatarPreco(subtotal)}
-
             </strong>
 
 
             <button
                 onclick="remover(${indice})">
-
                 🗑️
-
             </button>
 
         `;
@@ -237,7 +235,7 @@ function remover(indice) {
 
 
 // ========================================
-// 💬 FINALIZAR PEDIDO
+// 💬 FINALIZAR PEDIDO PELO WHATSAPP
 // ========================================
 
 document
@@ -245,7 +243,6 @@ document
     .addEventListener("click", function() {
 
 
-        // Verifica se está vazio
         if (carrinho.length === 0) {
 
             alert(
@@ -304,9 +301,8 @@ document
             formatarPreco(total);
 
 
-        // ========================================
-        // 📱 NÚMERO DO WHATSAPP
-        // ========================================
+        // 📱 COLOQUE AQUI O MESMO NÚMERO
+        // DO WHATSAPP QUE VOCÊ JÁ CONFIGUROU
 
         const numero =
             "555591927947";
@@ -325,3 +321,61 @@ document
         );
 
     });
+
+
+// ========================================
+// 🔎 BUSCA DE PRODUTOS
+// ========================================
+
+const campoBusca =
+    document.getElementById("campo-busca");
+
+
+if (campoBusca) {
+
+    campoBusca.addEventListener(
+        "input",
+        function() {
+
+            const texto =
+                campoBusca.value
+                    .toLowerCase()
+                    .trim();
+
+
+            const produtos =
+                document.querySelectorAll(".produto");
+
+
+            produtos.forEach(function(produto) {
+
+                const nome =
+                    produto
+                        .querySelector("h3")
+                        .textContent
+                        .toLowerCase();
+
+
+                if (nome.includes(texto)) {
+
+                    produto.style.display = "";
+
+                } else {
+
+                    produto.style.display = "none";
+
+                }
+
+            });
+
+        }
+    );
+
+}
+
+
+// ========================================
+// 🚀 INICIAR CARRINHO
+// ========================================
+
+atualizarCarrinho();
