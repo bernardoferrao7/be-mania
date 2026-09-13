@@ -1069,3 +1069,72 @@ h2 {
     }
 
 }
+
+/* ========================================
+   ❤️ POR QUE COMPRAR
+======================================== */
+
+#por-que-comprar {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.motivos {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.motivo {
+    background: #111;
+    border: 2px solid #008cff;
+    border-radius: 15px;
+    padding: 30px 20px;
+    transition: 0.3s;
+}
+
+.motivo:hover {
+    transform: translateY(-6px);
+    border-color: #008cff;
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.9),
+        0 0 30px rgba(0, 140, 255, 0.6),
+        0 0 60px rgba(0, 140, 255, 0.3);
+}
+
+.icone-motivo {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.motivo h3 {
+    color: #008cff;
+    margin-bottom: 12px;
+}
+
+.motivo p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+
+/* 📱 CELULAR */
+
+@media (max-width: 800px) {
+
+    .motivos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .motivos {
+        grid-template-columns: 1fr;
+    }
+
+}
