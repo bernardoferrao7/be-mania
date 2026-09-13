@@ -1281,3 +1281,125 @@ h2 {
     }
 
 }
+/* ========================================
+   📞 ÁREA DE CONTATO
+======================================== */
+
+#contato {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.subtitulo-contato {
+    color: #ccc;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.contato-caixa {
+    max-width: 900px;
+    margin: 40px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.contato-info {
+    background: #111;
+    border: 2px solid #008cff;
+    border-radius: 18px;
+
+    padding: 35px 25px;
+
+    transition: 0.3s;
+}
+
+.contato-info:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.9),
+        0 0 30px rgba(0, 140, 255, 0.6),
+        0 0 60px rgba(0, 140, 255, 0.3);
+}
+
+.icone-contato {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.contato-info h3 {
+    color: #008cff;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.contato-info p {
+    color: #ddd;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.botao-whatsapp,
+.botao-contato {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.botao-whatsapp {
+    background: #008cff;
+    color: white;
+    border: 2px solid #008cff;
+}
+
+.botao-whatsapp:hover {
+    background: #006dcc;
+
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.9),
+        0 0 25px rgba(0, 140, 255, 0.6);
+
+    transform: scale(1.05);
+}
+
+.botao-contato {
+    background: transparent;
+    color: #008cff;
+    border: 2px solid #008cff;
+}
+
+.botao-contato:hover {
+    background: #008cff;
+    color: white;
+
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.9),
+        0 0 25px rgba(0, 140, 255, 0.6);
+
+    transform: scale(1.05);
+}
+
+
+/* 📱 CELULAR */
+
+@media (max-width: 600px) {
+
+    .contato-caixa {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-info {
+        padding: 30px 20px;
+    }
+
+}
