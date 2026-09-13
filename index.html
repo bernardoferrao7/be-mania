@@ -12,9 +12,7 @@
 
 <body>
 
-    <!-- =========================
-         CABEÇALHO
-    ========================== -->
+    <!-- CABEÇALHO -->
 
     <header>
 
@@ -32,9 +30,7 @@
     </header>
 
 
-    <!-- =========================
-         INÍCIO
-    ========================== -->
+    <!-- INÍCIO -->
 
     <section id="inicio" class="hero">
 
@@ -51,32 +47,38 @@
     </section>
 
 
-    <!-- =========================
-         PRODUTOS
-    ========================== -->
+    <!-- PRODUTOS -->
 
     <section id="produtos">
 
         <h2>Nossos produtos 🛍️</h2>
 
+
         <!-- ABAS -->
 
         <div class="abas">
 
-            <button class="aba ativa" onclick="mostrarCategoria('bottons')">
+            <button
+                class="aba ativa"
+                onclick="mostrarCategoria('bottons')">
+
                 🔵 Bottons
+
             </button>
 
-            <button class="aba" onclick="mostrarCategoria('imas')">
+
+            <button
+                class="aba"
+                onclick="mostrarCategoria('imas')">
+
                 🧲 Imãs de geladeira
+
             </button>
 
         </div>
 
 
-        <!-- =========================
-             BOTTONS
-        ========================== -->
+        <!-- BOTTONS -->
 
         <div id="bottons" class="categoria ativa">
 
@@ -84,6 +86,8 @@
 
             <div class="produtos">
 
+
+                <!-- BOTTON 32 -->
 
                 <div class="produto">
 
@@ -99,11 +103,15 @@
                         class="adicionar"
                         data-nome="Botton 32mm"
                         data-preco="2.50">
+
                         🛒 Adicionar ao carrinho
+
                     </button>
 
                 </div>
 
+
+                <!-- KIT 32 -->
 
                 <div class="produto">
 
@@ -119,11 +127,15 @@
                         class="adicionar"
                         data-nome="Kit com 4 bottons 32mm"
                         data-preco="10.00">
+
                         🛒 Adicionar ao carrinho
+
                     </button>
 
                 </div>
 
+
+                <!-- BOTTON 44 -->
 
                 <div class="produto">
 
@@ -139,11 +151,15 @@
                         class="adicionar"
                         data-nome="Botton 44mm"
                         data-preco="4.00">
+
                         🛒 Adicionar ao carrinho
+
                     </button>
 
                 </div>
 
+
+                <!-- KIT 44 -->
 
                 <div class="produto">
 
@@ -159,16 +175,24 @@
                         class="adicionar"
                         data-nome="Kit com 4 bottons 44mm"
                         data-preco="12.00">
+
                         🛒 Adicionar ao carrinho
+
                     </button>
 
                 </div>
 
 
+                <!-- BOTTON 58 -->
+
                 <div class="produto">
 
                     <div class="produto-imagem">
-                        🔵
+
+                        <img
+                            src="bottons-58mm.png"
+                            alt="Bottons de 58mm da Bê Mania">
+
                     </div>
 
                     <h3>Botton 58mm</h3>
@@ -179,11 +203,15 @@
                         class="adicionar"
                         data-nome="Botton 58mm"
                         data-preco="4.00">
+
                         🛒 Adicionar ao carrinho
+
                     </button>
 
                 </div>
 
+
+                <!-- KIT 58 -->
 
                 <div class="produto">
 
@@ -199,7 +227,9 @@
                         class="adicionar"
                         data-nome="Kit com 4 bottons 58mm"
                         data-preco="12.00">
+
                         🛒 Adicionar ao carrinho
+
                     </button>
 
                 </div>
@@ -209,9 +239,7 @@
         </div>
 
 
-        <!-- =========================
-             IMÃS
-        ========================== -->
+        <!-- IMÃS -->
 
         <div id="imas" class="categoria">
 
@@ -219,6 +247,8 @@
 
             <div class="produtos">
 
+
+                <!-- 1 IMÃ -->
 
                 <div class="produto">
 
@@ -234,11 +264,15 @@
                         class="adicionar"
                         data-nome="1 Imã de geladeira"
                         data-preco="10.00">
+
                         🛒 Adicionar ao carrinho
+
                     </button>
 
                 </div>
 
+
+                <!-- KIT 3 -->
 
                 <div class="produto">
 
@@ -254,11 +288,15 @@
                         class="adicionar"
                         data-nome="Kit com 3 imãs"
                         data-preco="25.00">
+
                         🛒 Adicionar ao carrinho
+
                     </button>
 
                 </div>
 
+
+                <!-- KIT 10 -->
 
                 <div class="produto">
 
@@ -274,7 +312,9 @@
                         class="adicionar"
                         data-nome="Kit com 10 imãs"
                         data-preco="75.00">
+
                         🛒 Adicionar ao carrinho
+
                     </button>
 
                 </div>
@@ -286,9 +326,7 @@
     </section>
 
 
-    <!-- =========================
-         CARRINHO
-    ========================== -->
+    <!-- CARRINHO -->
 
     <section id="carrinho">
 
@@ -307,16 +345,18 @@
             <span id="total">R$ 0,00</span>
         </h3>
 
-        <button id="finalizar" class="botao">
+        <button
+            id="finalizar"
+            class="botao">
+
             💬 Finalizar pedido pelo WhatsApp
+
         </button>
 
     </section>
 
 
-    <!-- =========================
-         COMO PEDIR
-    ========================== -->
+    <!-- COMO PEDIR -->
 
     <section id="como-pedir">
 
@@ -324,38 +364,52 @@
 
         <div class="passos">
 
+
             <div>
+
                 <span>1️⃣</span>
+
                 <h3>Escolha seus produtos</h3>
+
                 <p>
                     Adicione os produtos que você deseja ao carrinho.
                 </p>
+
             </div>
 
+
             <div>
+
                 <span>2️⃣</span>
+
                 <h3>Confira seu carrinho</h3>
+
                 <p>
                     Veja os produtos e o valor total do seu pedido.
                 </p>
+
             </div>
 
+
             <div>
+
                 <span>3️⃣</span>
+
                 <h3>Envie pelo WhatsApp</h3>
+
                 <p>
                     Clique em finalizar pedido e envie sua mensagem.
                 </p>
+
             </div>
+
 
         </div>
 
     </section>
 
 
-    <!-- =========================
-         CONTATO
-    ========================== -->
+    <!-- CONTATO -->
 
     <section id="contato">
 
@@ -369,15 +423,15 @@
             href="https://wa.me/555591927947"
             target="_blank"
             class="botao">
+
             💬 WhatsApp
+
         </a>
 
     </section>
 
 
-    <!-- =========================
-         RODAPÉ
-    ========================== -->
+    <!-- RODAPÉ -->
 
     <footer>
 
@@ -392,15 +446,11 @@
     </footer>
 
 
-    <!-- =========================
-         JAVASCRIPT DAS ABAS
-    ========================== -->
+    <!-- ABAS -->
 
     <script>
 
         function mostrarCategoria(categoria) {
-
-            // Esconde todas as categorias
 
             document
                 .querySelectorAll(".categoria")
@@ -411,8 +461,6 @@
                 });
 
 
-            // Tira o destaque de todas as abas
-
             document
                 .querySelectorAll(".aba")
                 .forEach(function(botao) {
@@ -422,14 +470,10 @@
                 });
 
 
-            // Mostra a categoria escolhida
-
             document
                 .getElementById(categoria)
                 .classList.add("ativa");
 
-
-            // Descobre qual botão foi clicado
 
             if (categoria === "bottons") {
 
@@ -438,6 +482,7 @@
                     .classList.add("ativa");
 
             }
+
 
             if (categoria === "imas") {
 
@@ -451,6 +496,8 @@
 
     </script>
 
+
+    <!-- CARRINHO -->
 
     <script src="script.js"></script>
 
