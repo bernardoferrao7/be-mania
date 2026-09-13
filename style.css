@@ -848,3 +848,224 @@ h2 {
     }
 
 }
+/* ========================================
+   🎨 PERSONALIZE SEU PRODUTO
+======================================== */
+
+#personalize {
+
+    padding: 70px 20px;
+
+    background: #000;
+
+    text-align: center;
+
+}
+
+
+#personalize h2 {
+
+    color: #008cff;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.subtitulo-personalize {
+
+    color: #bbb;
+
+    font-size: 18px;
+
+    margin-bottom: 40px;
+
+}
+
+
+/* ========================================
+   📋 ETAPAS
+======================================== */
+
+.etapas-personalizacao {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+.etapa-personalizacao {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    text-align: left;
+
+    padding: 25px;
+
+    background: #080808;
+
+    border: 1px solid #006dcc;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.etapa-personalizacao:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #008cff;
+
+    box-shadow:
+
+        0 0 10px rgba(0, 140, 255, 0.7),
+
+        0 0 30px rgba(0, 140, 255, 0.3);
+
+}
+
+
+/* ========================================
+   🔵 NÚMERO
+======================================== */
+
+.numero-etapa {
+
+    min-width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #008cff;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    box-shadow:
+
+        0 0 10px rgba(0, 140, 255, 0.8);
+
+}
+
+
+.etapa-personalizacao h3 {
+
+    color: #00aaff;
+
+    margin: 0 0 8px;
+
+    font-size: 19px;
+
+}
+
+
+.etapa-personalizacao p {
+
+    color: #ccc;
+
+    margin: 0;
+
+    line-height: 1.6;
+
+}
+
+
+/* ========================================
+   💙 MENSAGEM FINAL
+======================================== */
+
+.personalize-final {
+
+    max-width: 700px;
+
+    margin: 40px auto 0;
+
+    padding: 25px;
+
+    border: 1px solid #008cff;
+
+    border-radius: 15px;
+
+    background: #050505;
+
+    box-shadow:
+
+        0 0 15px rgba(0, 140, 255, 0.25);
+
+}
+
+
+.personalize-final h3 {
+
+    color: #008cff;
+
+    font-size: 22px;
+
+    margin-top: 0;
+
+}
+
+
+.personalize-final p {
+
+    color: #ccc;
+
+    margin-bottom: 0;
+
+}
+
+
+/* ========================================
+   📱 CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+    .etapas-personalizacao {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    #personalize h2 {
+
+        font-size: 27px;
+
+    }
+
+
+    .etapa-personalizacao {
+
+        padding: 20px;
+
+    }
+
+}
