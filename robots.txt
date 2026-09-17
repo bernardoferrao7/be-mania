@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bernardoferrao7.github.io/be-mania/sitemap.xml
